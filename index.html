@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Website with Fullscreen</title>
+
+    <link rel="icon" href="google-meet-favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="google-meet-favicon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="google-meet-favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="google-meet-favicon-16x16.png">
+
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Prevent body scrollbars if iframe is full height */
+        }
+
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            height: 100%; /* Take full height of the viewport */
+            overflow: hidden;
+        }
+
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none; /* Removes the iframe border */
+            display: block; /* Ensures no extra space around the iframe */
+        }
+    </style>
+</head>
+<body>
+    <div class="iframe-container">
+        <iframe src="https://example.com" title="Embedded Content" allowfullscreen></iframe>
+    </div>
+</body>
+</html>
